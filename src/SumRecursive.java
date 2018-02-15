@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class SumRecursive {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in=new Scanner(System.in);
@@ -18,5 +17,4 @@ public class SumRecursive {
 
 		}
 	}
-
 
