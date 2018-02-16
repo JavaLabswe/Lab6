@@ -4,24 +4,33 @@ public class Method05 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-		System.out.print("Input a passwod : ");
+		System.out.println("Input a passwod :  ");
 		String a = in.next();
-		String b = check(a);
-		System.out.print("Password is valid : " + b);
-	}
-	public static String check(String a) {
-		for(int i=0;i<=a.length();i++) {
-			if(a.equals(10)) {
-				return a;
-			}
-			if(a.equals('a')||a.equals('z')) {
-				return a;
-			}
-			if(a.length()== 0 ||a.length()== 1||a.length()== 2||a.length()== 3||a.length()== 4||a.length()== 5||a.length()== 6||a.length()== 7||a.length()== 8||a.length()== 9)
-				return a;
+		boolean b = check(a);
+		if(b == true) {
+			System.out.print("Password is valid : " + a);
 		}
-		return a;
+		else {
+			System.out.print("Password is not valid ");
+		}
 		
 	}
-
+	public static boolean check(String a) {
+		int count=0;
+		for(int i=0;i<=a.length();i++) {
+			count++;
+			}
+		if(count==10) {
+			if(a.charAt(9)=='0'||a.charAt(9)=='1'||a.charAt(9)=='2'||a.charAt(9)=='3'||a.charAt(9)=='4'||a.charAt(9)=='5'||a.charAt(9)=='6'||a.charAt(9)=='7'||a.charAt(9)=='8'||a.charAt(9)=='9') {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
+			
+	}
 }
